@@ -9,8 +9,8 @@ import { isTsNode } from './utils/isTsNode';
 const DEFAULT_MIGRATIONS_COLLECTION = 'migrations_changelog';
 const DEFAULT_MIGRATIONS_DIR = 'migrations';
 const DEFAULT_CONFIG_FILENAME = 'migrations.json';
-const DEFAULT_ENV_VAR_URI = 'MONGO_MIGRATE_URI';
-const DEFAULT_ENV_VAR_DB = 'MONGO_MIGRATE_DB';
+const DEFAULT_ENV_VAR_URI = 'DATABASE_CONNECTION_STRING';
+const DEFAULT_ENV_VAR_DB = 'DATABASE_TENANT_NAME';
 const DEFAULT_GLOB_PATTERN = isTsNode() ? '**/*.ts' : '**/*.js';
 const DEFAULT_MIGRATION_NAME_TIMESTAMP_FORMAT = 'T';
 

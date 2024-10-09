@@ -39,11 +39,13 @@ Commands:
 ```
 
 Create a directory for your migrations.
+
 ```bash
 mongo-migrate init
 ```
 
 Instantiate a CLI within the newly created migrations directory
+
 ```typescript
 // index.ts in this example
 import { mongoMigrateCli } from 'mongo-migrate-ts';
@@ -57,6 +59,7 @@ mongoMigrateCli({
 ```
 
 Create a migration file in the configured migrations folder...
+
 ```bash
 mongo-migrate new
 ```
@@ -103,7 +106,7 @@ ts-node migrations/index.ts up
   // The glob options for pattern matching
   // (see https://github.com/isaacs/node-glob#options)
   // (Default: { cwd: migrationsDir })
-  globOptions?: string;  
+  globOptions?: string;
   // The connection uri, it can be empty if useEnv is true
   // (Example: mongodb://user:password@127.0.0.1:27017/db?authSource=admin)
   uri?: string;
@@ -115,10 +118,10 @@ ts-node migrations/index.ts up
   // Options related to environment configuration
   environment?: {
     // The name of the environment variable with the uri connection
-    // (Default: MONGO_MIGRATE_URI)
+    // (Default: DATABASE_CONNECTION_STRING)
     uriVar?: string;
     // The name of the environment variable with the db name
-    // (Default: MONGO_MIGRATE_DB)
+    // (Default: DATABASE_TENANT_NAME)
     databaseVar?: string;
   };
   // The format pattern for timestamp in the migration file name. By default: 'T'

@@ -55,8 +55,8 @@ describe('config', () => {
     });
   });
   it('should read the db config from the env vars', () => {
-    process.env.MONGO_MIGRATE_URI = configMock.uri;
-    process.env.MONGO_MIGRATE_DB = configMock.database;
+    process.env.DATABASE_CONNECTION_STRING = configMock.uri;
+    process.env.DATABASE_TENANT_NAME = configMock.database;
 
     const processedConfig = processConfig({
       ...configMock,
